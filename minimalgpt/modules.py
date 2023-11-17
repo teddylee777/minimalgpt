@@ -91,12 +91,10 @@ class WebSummarizeModule(BaseModule):
             return chain.run(self.docs)
 
 
-
 class PandasModule(BaseModule):
     def __init__(self, df, streaming=False, **model_kwargs):
         super().__init__(streaming, **model_kwargs)
-        
-        llm = ChatOpenAI(**model_kwargs)
+        llm = ChatOpenAI(**self.model_kwargs)
         # 에이전트 생성
         self.agent = create_pandas_dataframe_agent(
             llm,                                   # 모델 정의

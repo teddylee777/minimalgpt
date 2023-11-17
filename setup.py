@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='minimalgpt',
-    version='0.0.4',
+    version='0.0.5',
     description='Simple LangChain Wrapper Package for ease of using ChatGPT',
     author='teddylee777',
     author_email='teddylee777@gmail.com',
